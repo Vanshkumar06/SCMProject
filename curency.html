@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="curency.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+         <button class="buttonhead" id="home"><a class="homecss" href="1.html">HOME</a></button>
+        <!-- <button id="gg"></button> -->
+        <button class="buttonfeed" id="fee "><a target="_blank" class="feedback" href="feed2.html">Feedback</a></button>
+        <button class="buttonabout" id="us"><a target="_blank" class="homecss" href="about1.html">About us</a></button>
+    </header>
+    <div class="converter-container">
+        <h1>CURRENCY CONVERTER</h1>
+
+        <!-- From Currency -->
+        <div class="input-group">
+            <label for="fromCurrency">
+                <p style="font-size: 20px;">FROM CURRENCY</p>
+            </label>
+            <select id="fromCurrency">
+                <option value="USD">
+                    <p style="font-size: 30px;">US Dollar (USD)</p>
+                </option>
+                <option value="EUR">
+                    <p style="font-size: 30px;">Euro (EUR)</p>
+                </option>
+                <option value="GBP">
+                    <p style="font-size: 30px;">British Pound (GBP)</p>
+                </option>
+                <option value="AUD">
+                    <p style="font-size: 30px;">Australian Dollar (AUD)</p>
+                </option>
+                <option value="CAD">
+                    <p style="font-size: 30px;">Canadian Dollar (CAD)</p>
+                </option>
+                <option value="CHF">
+                    <p style="font-size: 30px;">Swiss Franc (CHF)</p>
+                </option>
+                <option value="JPY">
+                    <p style="font-size: 30px;">Japanese Yen (JPY)</p>
+                </option>
+                <option value="CNY">
+                    <p style="font-size: 30px;">Chinese Yuan (CNY)</p>
+                </option>
+                <option value="INR">
+                    <p style="font-size: 30px;">Indian Rupee (INR)</p>
+                </option>
+            </select>
+        </div>
+
+        <!-- To Currency -->
+        <div class="input-group">
+            <label for="toCurrency" style="margin-top: 20px;">TO CURRENCY</label>
+            <select id="toCurrency">
+                <option value="USD">US Dollar (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="GBP">British Pound (GBP)</option>
+                <option value="AUD">Australian Dollar (AUD)</option>
+                <option value="CAD">Canadian Dollar (CAD)</option>
+                <option value="CHF">Swiss Franc (CHF)</option>
+                <option value="JPY">Japanese Yen (JPY)</option>
+                <option value="CNY">Chinese Yuan (CNY)</option>
+                <option value="INR">Indian Rupee (INR)</option>
+            </select>
+        </div>
+
+        <!-- Amount Input -->
+        <div class="input-group">
+            <label for="amount" style="margin-top: 20px;">AMOUNT</label>
+            <input type="number" id="amount" placeholder="Enter amount" />
+        </div>
+
+        <!-- Convert Button -->
+        <button onclick="convertCurrency()">CONVERT</button>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="loading">Converting...</div>
+
+        <!-- Result -->
+        <div class="result">
+            <p id="convertedAmount"></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 Smart Calculator. All rights reserved.
+    </div>
+    <script src="curency.js"></script>
+</body>
+
+</html>

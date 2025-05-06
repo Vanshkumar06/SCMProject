@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+    margin: 0;
+    padding: 105px;
+    background-image: url(./fffff.png);
+}
+header{height: 60px;width: 100%;
+    background-color:black;
+    color:white;
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content:space-between ;
+    align-items: center;
+    font-size: x-large;
+    margin-left: -110px;
+}
+  
+  #us{margin-right: 20px;}
+  #home{margin-left: 20px;}
+  #gg{display: flex;
+  ;}
+  .buttonhead{
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    margin-top: -8px;
+    margin-bottom: -10px;
+    padding-bottom: 40px;
+    margin-top: -2px;
+    margin-bottom: -10px;
+  }
+  .buttonfeed{
+    width: 130px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    margin-top: -2px;
+    margin-bottom: -10px;
+    padding-bottom: 40px;
+    margin-left: 1100px;
+  }
+  .buttonabout{
+    width: 130px;
+    height: 50px;
+    background-color: black;
+    margin-top: -8px;
+    margin-bottom: -10px;
+    padding-bottom: 40px;
+    margin-top: -2px;
+    margin-bottom: -10px;
+  }
+  .feedback{
+    text-decoration: none;
+    color: white;
+  }
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: #fff;
+   
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+button:hover {
+    background-color: green;
+    transform: translateY(-2px);
+  }
+h1 {
+    text-align: center;
+    color: #333;
+    font-family: unset
+}
+
+.back {
+    width: 380px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+
+textarea {
+    width: 590px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+button a {text-decoration: none;}

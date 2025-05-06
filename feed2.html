@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            background-image: url(./fffff.png);
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 171px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 96%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .popup button {
+            background-color: #008CBA;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .popup button:hover {
+            background-color: #006f8b;
+        }
+         
+  #us{margin-right: 20px;}
+  #home{margin-left: 20px;}
+  #gg{display: flex;
+  ;}
+  .buttonhead{
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    margin-top: -8px;
+    margin-bottom: -10px;
+    padding-bottom: 40px;
+    margin-top: -2px;
+    margin-bottom: -10px;
+  }
+  .buttonfeed{
+    width: 130px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    margin-top: -2px;
+    margin-bottom: -10px;
+    padding-bottom: 40px;
+    margin-left: 1100px;
+  }
+  .buttonabout{
+    width: 130px;
+    height: 50px;
+    background-color: black;
+    margin-top: -8px;
+    margin-bottom: -10px;
+    padding-bottom: 40px;
+    margin-top: -2px;
+    margin-bottom: -10px;
+  }
+  header{height: 60px;width: 100%;
+    background-color:black;
+    color:white;
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content:space-between ;
+    align-items: center;
+    font-size: x-large;
+    margin-left: 0px;
+}
+.feedback{
+    text-decoration: none;
+    color: white;
+  }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="buttonhead" id="home"><a target="_blank" class="feedback" href="1.html">Home</a></button>
+        <!-- <button id="gg"></button> -->
+        <button class="buttonfeed" id="fee "><a target="_blank" class="feedback" href="">Feedback</a></button>
+        <button class="buttonabout" id="us"><a target="_blank'" class="feedback" href="about1.html">About us</a></button>
+    </header>
+
+<div class="container">
+    <h2>Feedback Form</h2>
+    <form id="feedbackForm">
+        <label for="firstName">First Name</label>
+        <input type="First name" id="First name"  placeholder=" ENTER YOUR FIRST NAME" required class="back">
+        
+        <label for="lastName">Last Name</label>
+        <input type="Last name" id="Last name" placeholder="ENTER YOUR LAST NAME" required class="back" >
+        
+        <label for="address">Address</label>
+        <input type="Address" id="Address" placeholder="ENTER YOUR ADDRESS" required class="back">
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="ENTER YOUR EMAIL" required class="back">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required class="back"></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div class="popup" id="thankYouPopup">
+    <h3>Thank you for your response!</h3>
+    <button onclick="closePopup()">OK</button>
+</div>
+
+<script>
+    // Get the form and popup elements
+    const form = document.getElementById('feedbackForm');
+    const popup = document.getElementById('thankYouPopup');
+
+    // When the form is submitted, display the popup
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Show the thank you popup
+        popup.style.display = 'block';
+    });
+
+    // Function to close the popup
+    function closePopup() {
+        popup.style.display = 'none';
+        form.reset(); // Reset the form
+    }
+</script>
+
+</body>
+</html>
