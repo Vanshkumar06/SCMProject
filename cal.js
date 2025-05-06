@@ -5,6 +5,7 @@ function appendToResult(value) {
     resultField.value += value;
 }
 
+// jhg
 function clearResult() {
     resultField.value = '';
 }
