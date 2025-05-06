@@ -5,7 +5,7 @@ document.getElementById('Feedback').addEventListener('submit', function(event) {
     // Show the pop-up
     document.getElementById('thankYouPopup').style.display = 'flex';
 });
-
+// 
 // Close the pop-up when the "Close" button is clicked
 function closePopup() {
     document.getElementById('thankYouPopup').style.display = 'none';
