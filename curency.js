@@ -8,7 +8,7 @@ function convertCurrency() {
       alert('Please enter a valid amount');
       return;
   }
-
+// 
   // Show loading state
   document.getElementById('loading').style.display = 'block';
   document.getElementById('convertedAmount').textContent = '';
