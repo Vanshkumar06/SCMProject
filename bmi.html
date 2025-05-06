@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="bmi.css">
+</head>
+<body>
+    <header class="top">
+        <div class="footer">
+                <!-- <div> -->
+                   <!-- <img class="bmibackimage" src="bmiback.png" alt=""> -->
+                 <!-- </div> -->
+             <div class="mainhead">
+                   <div class="fr">
+                        <button> <a target="_blank" style="font-size: larger;" href="1.html">Home</a> </button>
+                   </div>
+                    <div class="fl">
+                         <button><a target="_blank" style="font-size: larger;" href="feed2.html">Feedback</a> </button>
+                         <button> <a target="_blank" style="font-size: larger;" href="about1.html">About Us</a></button>
+                    </div>
+             </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="calculator">
+            <h1>BMI CALCULATOR</h1>
+            
+            <!-- Age input -->
+            <label for="age">AGE (YEARS):</label>
+            <input type="number" id="age" placeholder="Enter your age" min="1">
+            
+            <!-- Gender selection -->
+            <label for="gender">GENDER:</label>
+            <select id="gender">
+                <option value="male">MALE</option>
+                <option value="female">FEMALE</option>
+                <option value="other">OTHER</option>
+            </select>
+
+            <!-- Weight input -->
+            <label for="weight">WEIGHT (KG):</label>
+            <input type="number" id="weight" placeholder="Enter your weight">
+
+            <!-- Height input -->
+            <label for="height">HEIGHT (CM):</label>
+            <input type="number" id="height" placeholder="Enter your height">
+
+            <button onclick="calculateBMI()">CALCULATE BMI</button>
+
+            <div id="result">
+              <p>YOUR BMI IS: <span id="bmi-value"></span></p>
+                <p id="status"></p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 Smart Calculator. All rights reserved.
+    </div>
+
+    <script src="bmi.js"></script>
+</body>
+</html>

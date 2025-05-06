@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sleek, modern font */
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(bbbbbbbb.jpg);
+    background-size:cover;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    padding: 0 20px;
+    /* background-image: url(bmi.webp); */
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .top {
+    background-color: #000000;
+      height: 150px;
+      margin-left: -26px;
+      margin-right: -33px;
+      height: 211px;
+  }
+  .mainhead{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .footer{
+    display: ruby ;
+  
+  }
+  .footer a {
+    color: rgb(49, 3, 3);
+    font-size: 50px;
+    font-weight: 500;
+     text-decoration: none;
+  }
+  .fr{
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+  }
+  .fl{
+    display: flex;
+    height: 150px;
+    margin-left: 2600px;
+  }
+  .bmibackimage{
+    padding-top: -20px;
+    margin-top: -80px;
+    height: 400px;
+  }
+  
+  .footer{display: flex;
+    justify-content: space-between;}
+    .footer a {color: white;
+    font-size: x-large;
+    font-weight: 500;}
+  
+  
+    .footer-bottom {
+      display: flex
+  ;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      justify-content: center;
+      align-items: center;
+      background-color: #ece5d3;
+      font-size: 14px;
+      color: black;
+      width: 100%;
+      height: 90px;
+      font-size: 35px;
+  }
+    
+  /* Main container */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height of the screen */
+    width: 100%;
+  }
+  
+  /* Calculator box */
+  .calculator {
+    background: rgba(255, 255, 255, 0.9); /* Light, slightly transparent background */
+    padding: 60px;
+    border-radius: 30px; /* Smooth rounded corners */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Soft shadow to lift it off the page */
+    width: 100%;
+    max-width: 1000px;
+    min-height: 700px;
+    text-align: center;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: -300px;
+  }
+  
+  .calculator:hover {
+    transform: scale(1.05); /* Hover effect to slightly increase size */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+  
+  /* Title */
+  h1 {
+    font-size: 56px;
+    margin-bottom: 40px;
+    color: #4A4A4A;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+  }
+  
+  h1:hover {
+    color: light gray; /* Hover effect on title color */
+  }
+  
+  /* Label styling */
+  label {
+    font-size: 28px;
+    margin-bottom: 16px;
+    display: block;
+    color: #555;
+    font-weight: 600;
+  }
+  
+  /* Input field and select box styling */
+  input, select {
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    font-size: 28px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.05); /* Soft inset shadow */
+  }
+  
+  /* Focused input field effect */
+  input:focus, select:focus {
+    border-color: #FF6F61; /* Border color change on focus */
+    outline: none;
+    background-color: #fff;
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #000000;
+    color: #fff;
+    padding: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    font-size: 36px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for the button */
+  }
+  
+  button:hover {
+    background-color: #837d7e; /* Darken the button color on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+  }
+  
+  
+  
+  
+  /* Result section styling */
+  #result {
+    margin-top: 60px;
+    display: none;
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 1px;
+  }
+  
+  #status {
+    font-size: 36px;
+    margin-top: 30px;
+    transition: color 0.3s ease;
+  }
+  
+  #status.underweight {
+    color: #FF6347; /* Red for underweight */
+  }
+  
+  #status.normal {
+    color: #28A745; /* Green for normal */
+  }
+  
+  #status.overweight {
+    color: #FFA500; /* Orange for overweight */
+  }
+  
+  #status.obese {
+    color: #DC3545; /* Dark red for obese */
+  }
+  
+  /* Animations for results */
+  #status {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 480px) {
+    .calculator {
+        padding: 50px;
+        max-width: 90%;
+        min-height: 650px;
+    }
+  
+    h1 {
+        font-size: 48px;
+    }
+  
+    button {
+        font-size: 32px;
+    }
+  
+    input, select {
+        padding: 22px;
+        font-size: 26px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .calculator {
+        max-width: 90%;
+        min-height: 650px;
+    }
+  
+    h1 {
+        font-size: 50px;
+    }
+  
+    input, select {
+        padding: 24px;
+        font-size: 26px;
+    }
+  
+    button {
+        font-size: 32px;
+    }
+  }
+  

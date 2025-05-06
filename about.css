@@ -1,0 +1,117 @@
+body {
+    background-image: linear-gradient(to right, #327ce4, #dae395);
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: serif;
+    font-weight: 800;
+}
+
+h3 {
+    text-align: center;
+    font-size: 35px;
+    font-style: revert-layer;
+    font-family: math;
+    margin-top: 65px;
+}
+
+h4 {
+    text-align: left;
+    font-size: 30px;
+    font-style: revert-layer;
+    font-family: math;
+    margin-top: 65px;
+    padding-left: 50px;
+}
+
+.main {
+    height: 450px;
+    display: flex;
+    justify-content:space-evenly;
+    
+}
+
+.cont_a{
+    
+    width: 300px;
+    height: 500px;
+    border: 2px solid black;
+    background-color: aliceblue;
+}
+
+.c {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 7px;
+}
+
+p{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 0px;
+    font-family: fantasy;
+}
+
+.img_in {
+    background-image: url(1.jpg);
+    height: 400px;
+    background-size: cover;
+    
+}
+
+.img_pit {
+    background-image: url(4.jpg);
+    height: 400px;
+    background-size: cover;
+    
+}
+.img_out {
+    background-image: url(3.jpg);
+    height: 400px;
+    background-size: cover;
+}
+
+.pnb i {
+    font-size: 20px;
+    color: rgb(112, 8, 112);
+}
+
+
+.pnb {
+    display: ruby;
+}
+
+.id {
+    display: flex;
+   margin-top: 79px;
+    padding-left: 50px;
+    align-items: center;
+    font-size: 30px;
+    font-style: revert-layer;
+    font-family: math;
+}
+.lolo {
+    display: contents;
+}
+
+.id i {
+    font-size: 30px;
+}
+
+.id_i {
+    font-size: 30px;
+    font-style: unset;
+    font-family: sans-serif;
+    padding-left: 7px;
+
+}
+
+
+.sigma {
+    padding-left: 109px;
+    font-size: 25px;
+    margin-top: 0px;
+}
+

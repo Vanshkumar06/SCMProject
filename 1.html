@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Calculator</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+       background-color: #f0e1e1; */ */ */
+       
+      }
+      .book {
+        position: relative;
+        border-radius: 10px;
+        width: 100%;
+        height: 300px;
+        background-color: #f7f4ee; /* Updated background color */
+        box-shadow: 4px 3px 24px rgba(133, 183, 44, 0.2); /* Updated box shadow color */
+        transform: preserve-3d;
+        perspective: 2000px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        overflow: hidden;
+        transition: all 0.5s;
+      }
+      .linkcss{
+        text-decoration: none;
+        color: white;
+      }
+      .book img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+        backface-visibility: hidden;
+        border: 2px solid #e0d5b7; /* Updated border color */
+      }
+
+      .cover {
+        position: absolute;
+        top: 0;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.5s;
+        backface-visibility: hidden;
+        transform: rotateY(90deg);
+        padding: 20px;
+      }
+
+      .cover h5,
+      .cover p {
+        margin: 0;
+        text-align: center;
+        padding: 0 10px;
+      }
+
+      .book:hover img {
+        transform: rotateY(-90deg);
+      }
+
+      .book:hover .cover {
+        transform: rotateY(0deg);
+      }
+
+      .view-recipe-btn {
+        margin-top: 15px;
+        padding: 8px 16px;
+        background-color: #28a745;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .view-recipe-btn:hover {
+        background-color: #218838;
+
+      }
+      .navbar-nav {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        gap: 15px;
+        margin-left: 100px;
+      }
+
+      .navbar-expand-lg {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        height: 60px;
+        background-color: #e0d5b7;
+        margin-left: -10px;
+        margin-right: -22px;
+    }
+
+      /* Style for the background image and overlay text */
+      .image-container {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background-image: url(num.png);
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        box-shadow:-5px -5px 15px  20px rgba(118, 119, 85, 0.2);
+      }
+
+      .image-container .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color:#515151;
+        font-size: 36px;
+        font-weight: bold;
+
+        font-family: "Playfair Display", sans-serif;
+      }
+
+      .row {
+        margin-bottom: 50px;
+      }
+      @media (max-width: 768px) {
+        .book {
+          height: 250px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .book {
+          height: 200px;
+        }
+      }
+      .me-2 {
+        border-radius: 18px;
+      }
+
+      .navbar-nav {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        gap: 15px;
+        margin-left: 40px;
+      }
+
+      footer {
+        background-color: #f8f9fa;
+        color: #343a40;
+      }
+      
+      footer h5 {
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      
+      footer p {
+        margin: 0.5rem 0;
+      }
+      
+      footer a {
+        text-decoration: none;
+        color: #007bff;
+        transition: color 0.3s;
+      }
+      
+      footer a:hover {
+        color: #0056b3;
+      }
+      
+      footer .img-fluid {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      footer .bg-light {
+        background-color: #f8f9fa !important;
+    }
+
+
+   
+    .text-lg-start {
+      text-align: left !important;
+      margin-left: -475px;
+      margin-right: -490px;
+    }
+      
+
+
+      .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex
+;
+    flex-wrap: wrap;
+    margin-top: calc(-1* var(--bs-gutter-y));
+    margin-right: calc(-.5* var(--bs-gutter-x));
+    margin-left: calc(-.5* var(--bs-gutter-x));
+    justify-content: center;
+      }
+      
+      @media (max-width: 576px) {
+        footer .col-lg-4 {
+          margin-bottom: 1.5rem;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"
+            >
+            <!-- <img src="./New folder/w3.png" alt="Logo" width="250" height="55" -->
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >HOME</a
+                >
+              </li>
+              <!-- <li class="nav-item"> -->
+                <!-- <a class="nav-link" href="../other/recipeblog.html">Blog</a> -->
+              <!-- </li> -->
+
+              <!-- <li class="nav-item"> -->
+                <!-- <a href="../other/Submit.html" class="nav-link" -->
+                  <!-- >Submit Recipe</a -->
+                <!-- > -->
+              <!-- </li> -->
+              <li class="nav-item">
+                <a target="_blank" href="feed2.html" class="nav-link"
+                  > FEEDBACK</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a target="_blank" href="about1.html" class="nav-link">ABOUT US</a>
+              </li>
+            </ul>
+             <!-- <form class="d-flex">  -->
+              <!-- <input -->
+                <!-- class="form-control me-2" -->
+                <!-- type="search" -->
+                <!-- placeholder="Search" -->
+                <!-- aria-label="Search" -->
+              <!-- /> -->
+              <!-- <svg -->
+                <!-- xmlns="http://www.w3.org/2000/svg" -->
+                <!-- fill="none" -->
+                <!-- viewBox="0 0 24 24" -->
+                <!-- stroke-width="1.5" -->
+                <!-- stroke="currentColor" -->
+                <!-- class="size-6" -->
+                <!-- width="36px" -->
+                <!-- height="36px" -->
+              <!-- > -->
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container mt-5">
+        <div class="image-container">
+          <div class="overlay-text">Calculator</div>
+        </div>
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6 mb-6">
+            <div class="book">
+              <img
+                src="./cal.jpg"
+                alt="Recipe 1"
+              />
+              <div class="cover">
+                <h5>Voice Assisted Calculator</h5>
+                <p>
+                  Calculate your complex maths easily.
+                </p>
+                <button class="view-recipe-btn"><a class="linkcss" target="_blank" href="cal.html">Start</a></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <!-- <div class="col-lg-4 col-md-6 mb-6"> -->
+            <!-- <div class="book"> -->
+              <!-- <img -->
+                <!-- src="./New folder/b6249fdc-b11b-45a6-91d3-38fcf752c7a9.jpg" -->
+                <!-- alt="Recipe 2" -->
+              <!-- /> -->
+              <!-- <div class="cover"> -->
+                <!-- <h5>BMI Calculator</h5> -->
+                <!-- <p> -->
+                  <!-- Calculate you Perfect Body Mass Index With BMI calculator -->
+                <!-- </p> -->
+                <!-- <button class="view-recipe-btn">Start</button> -->
+              <!-- </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6 mb-6">
+            <div class="book">
+              <img src="./abcccccccccc.jpg" alt="Recipe 3" />
+              <div class="cover">
+                <h5>Unit Converter</h5>
+                <p>
+                  Hassle free unit conversion
+                </p>
+                <button class="view-recipe-btn"><a class="linkcss" target="_blank" href="unitconv.html">Start</a></button>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+
+
+        <div class="row">
+          <!-- Card 3 -->
+          <div class="col-lg-4 col-md-6 mb-6">
+            <div class="book">
+              <img
+                src="./bbbmmmiii.jpg"
+                alt="Recipe 1"
+              />
+              <div class="cover">
+                <h5>BMI</h5>
+                <p>
+                  Calculate your Body Mass Index
+                </p>
+                <button class="view-recipe-btn"><a class="linkcss" target="_blank" href="bmi.html">Start</a></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-lg-4 col-md-6 mb-6">
+            <div class="book">
+              <img src="./curr.jpg" alt="Recipe 3" />
+              <div class="cover">
+                <h5>Currency Calculator</h5>
+                <p>
+                  Calculate Currency exchange without any trouble
+                </p>
+                <button class="view-recipe-btn"><a class="linkcss" target="_blank" href="curency.html">Start</a></button>
+              </div>
+            </div>
+          </div>
+
+
+    </div>
+
+
+    <footer class="bg-light text-center text-lg-start">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <img src="./logo final.jpg" alt="Website Logo" class="img-fluid mb-3" style="max-width: 230px;">
+            <p>
+              A calculator is a device or tool used to perform mathematical calculations, ranging from basic arithmetic (such as addition, subtraction, multiplication, and division) to more complex operations, such as trigonometry, logarithms, and statistical computations. Calculators can take various forms, including
+    
+            </p>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h5 class="text-upper">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-dark">HOME</a>
+              </li>
+              <!-- <li> -->
+                <!-- <a href="#" class="text-dark">Recipes</a> -->
+              <!-- </li> -->
+              <li>
+                <a href="#" class="text-dark">Categories</a>
+              </li>
+              <li>
+                <a href="#" class="text-dark">About</a>
+              </li>
+            </ul>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h5 class="text-upper">Contact Us</h5>
+            <ul class="list-unstyled">
+              <li>
+                <p class="text-dark">Email: vansh1756.becse24@chitkara.edu.in</p>
+              </li>
+              <li>
+                <p class="text-dark">Phone: +123 456 7890</p>
+              </li>
+              <li>
+                <p class="text-dark">Address:Chitkara University Rajpura City India</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
