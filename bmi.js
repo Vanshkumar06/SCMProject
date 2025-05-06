@@ -10,7 +10,7 @@ function calculateBMI() {
       alert("Please enter valid numbers for weight, height, and age.");
       return;
   }
-
+// ,
   // Convert height from cm to meters
   const heightInMeters = height / 100;
 
